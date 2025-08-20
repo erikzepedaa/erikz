@@ -34,17 +34,30 @@ Para comprobar desde terminal:
 git --version
 ```
 
-(Opcional) Editor recomendado: Visual Studio Code https://code.visualstudio.com/
+Instalar: Visual Studio Code https://code.visualstudio.com/
 
 ### 3) Crear tu repositorio desde esta plantilla
 
-1. Abre esta plantilla en GitHub y haz clic en Use this template → Create a new repository.
-2. Ponle nombre a tu repo (por ejemplo, mi-docs) y crea el repositorio.
-3. En tu computadora, clona tu nuevo repo:
+1. Abre Visual Studio Code.
+2. En la barra de menú, selecciona "Terminal"-> "Nuevo Terminal". Aparecerá una nueva pestaña de terminal en la parte inferior.
+3. En un navegador de internet abre esta plantilla en GitHub y haz clic en Use this template → Create a new repository.
+4. Ponle nombre a tu repo (por ejemplo, mi-docs) y crea el repositorio.
+5. En tu computadora regresa a la terminal de Visual Studio Code, y elige en que carpeta clonar tu nuevo repo, usando los comandos `cd` por ejemplo:
+```bash
+cd ruta/a/tu/carpeta
+```
+6. Clona tu repositorio con el comando siguiente, reemplazando `<tu-usuario>` y `<tu-repo>` con el encontrado en la pagina, cuando le das click a "Code"->"https" y copias la ruta
 
 ```bash
 git clone https://github.com/<tu-usuario>/<tu-repo>.git
 cd <tu-repo>
+```
+
+!!! Importante: No olvides configurar tu nombre de usuario y correo electrónico en Git. Esto es necesario para que tus commits se registren correctamente.
+
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu.email@example.com"
 ```
 
 ### 4) Instalar dependencias (una sola vez por repo)
@@ -54,8 +67,6 @@ Recomendado: usar entorno virtual para aislar paquetes. (OPCIONAL)
 WINDOWS
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
 pip install mkdocs-material
 ```
 
