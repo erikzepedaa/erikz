@@ -66,7 +66,7 @@ Recomendado: usar entorno virtual para aislar paquetes. (OPCIONAL)
 
 WINDOWS
 
-```powershell
+```bash
 pip install mkdocs-material
 ```
 
@@ -104,16 +104,18 @@ Controla el menú lateral agregando una sección `nav:` en `mkdocs.yml`.
 ### Publicación automática
 
 Este proyecto incluye un flujo de GitHub Actions que publica el sitio automáticamente al hacer push a la rama principal (o cuando el flujo está configurado para ejecutarse).
-Pasos típicos:
+Pasos:
 
-1. Sube tus Cambios
+1. Configura el deploy de tu pagina, en tu repositorio de GitHub, entra a la pestaña "Settings" y busca la sección "Pages".
+2. En `source` selecciona Deploy from a branch, y en Branch seleccion `gh-pages` y `/root`
+3. Sube tus Cambios
 ```bash
 git add .
 git commit -m "Actualizo documentación"
 git push origin main
 ```
-2. Ve a la pestaña Actions de tu repo en GitHub y verifica que el flujo de “build/deploy” se ejecute correctamente.
-3. La página quedará disponible como Project Site en una URL del tipo:
+4. Ve a la pestaña Actions de tu repo en GitHub y verifica que el flujo de “build/deploy” se ejecute correctamente.
+5. La página quedará disponible como Project Site en una URL del tipo:
 ```php-template
 https://<tu-usuario>.github.io/<tu-repo>/
 ```
